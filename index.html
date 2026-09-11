@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estharakula Nagaraju - DevOps Engineer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; background: #111; color: #fff; }
+
+        nav {
+            background: #000;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 26px; font-weight: bold; letter-spacing: 2px; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: white; text-decoration: none; font-size: 16px; }
+        nav a:hover { color: #f5b942; }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content h1 { font-size: 60px; margin-bottom: 15px; }
+        .hero-content p { font-size: 20px; margin-bottom: 30px; color: #ccc; }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #f5b942;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .btn:hover { background: white; }
+
+        section { padding: 70px 8%; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 40px; }
+
+        .about-text {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: #ccc;
+            font-size: 18px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .skill-card {
+            background: #1d1d1d;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .skill-card h3 { color: #f5b942; margin-bottom: 10px; }
+        .skill-card p { color: #ccc; font-size: 14px; }
+
+        .exp-section {
+            max-width: 900px;
+            margin: auto;
+        }
+        .exp-section h3 { color: #f5b942; font-size: 22px; margin-bottom: 8px; }
+        .exp-section h4 { color: #fff; font-size: 18px; margin-bottom: 5px; }
+        .exp-section .date { color: #f5b942; font-size: 14px; margin-bottom: 15px; }
+        .exp-section p { color: #ccc; font-size: 16px; margin-bottom: 30px; }
+
+        .edu-table {
+            max-width: 900px;
+            margin: auto;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .edu-table th, .edu-table td {
+            padding: 14px 20px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .edu-table th { color: #f5b942; font-size: 16px; }
+        .edu-table td { color: #ccc; font-size: 15px; }
+
+        .contact {
+            max-width: 700px;
+            margin: auto;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-info p { color: #ccc; font-size: 16px; margin-bottom: 8px; }
+        .contact-info a { color: #f5b942; text-decoration: none; }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #1d1d1d;
+            color: #fff;
+        }
+        .contact form textarea { height: 150px; resize: none; }
+        .contact form button {
+            padding: 13px 30px;
+            background: #f5b942;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact form button:hover { background: white; }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 25px;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; }
+            .hero-content h1 { font-size: 40px; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Nagaraju</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Estharakula Nagaraju</h1>
+            <p>DevOps Engineer | AWS | CI/CD | Automation</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-text">
+            <p>
+                DevOps professional with hands-on experience in software deployment, automation,
+                and optimizing CI/CD pipelines across multiple server and cloud environments.
+                Proficient in leveraging configuration management, containerization, and cloud
+                platforms to streamline operations and deliver reliable infrastructure.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Cloud Platform</h3>
+                <p>AWS (EC2, S3, VPC, IAM, ELB, Auto Scaling, ECS, Route 53, CloudWatch, SNS, SQS, EBS, CloudFront, Glacier)</p>
+            </div>
+            <div class="skill-card">
+                <h3>CI/CD & Build Tools</h3>
+                <p>Jenkins, Maven</p>
+            </div>
+            <div class="skill-card">
+                <h3>IaC & Config Management</h3>
+                <p>Ansible, Terraform</p>
+            </div>
+            <div class="skill-card">
+                <h3>Containerization</h3>
+                <p>Docker, ECS Task Definitions, Microservices</p>
+            </div>
+            <div class="skill-card">
+                <h3>Source Control</h3>
+                <p>Git</p>
+            </div>
+            <div class="skill-card">
+                <h3>Security</h3>
+                <p>OWASP Dependency Check, Trivy</p>
+            </div>
+            <div class="skill-card">
+                <h3>Operating Systems</h3>
+                <p>Linux (RHEL, CentOS, Ubuntu), Windows</p>
+            </div>
+            <div class="skill-card">
+                <h3>Linux Administration</h3>
+                <p>Installation, configuration, kernel upgrades, YUM, RPM</p>
+            </div>
+            <div class="skill-card">
+                <h3>Networking</h3>
+                <p>VPC, Route 53 (DNS)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="exp-section">
+            <h3>DevOps Engineer</h3>
+            <div class="date">Professional Experience</div>
+            <p>
+                Deploying, automating, and optimizing software delivery pipelines using
+                Jenkins, Docker, Ansible, and Terraform. Managing AWS cloud infrastructure
+                including EC2, S3, VPC, IAM, ELB, Auto Scaling, and ECS for containerized
+                microservices. Implementing security scanning with OWASP Dependency Check
+                and Trivy. Configuring CI/CD workflows, managing source code with Git,
+                and building applications with Maven.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <table class="edu-table">
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.Tech</td>
+                    <td>JNTUk</td>
+                    <td>2022</td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td>Diploma Civil</td>
+                    <td>State Board of Technical Education</td>
+                    <td>2018</td>
+                    <td>68%</td>
+                </tr>
+                <tr>
+                    <td>S.S.C</td>
+                    <td>Board of Secondary Education</td>
+                    <td>2013</td>
+                    <td>57%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact">
+            <div class="contact-info">
+                <p>Email: <a href="mailto:nagarajuestharakula764@gmail.com">nagarajuestharakula764@gmail.com</a></p>
+                <p>Phone: 7396402052</p>
+                <p>Address: 1-116, Recharla, Chintalapudi, Eluru District</p>
+            </div>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your message..."></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Estharakula Nagaraju. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
