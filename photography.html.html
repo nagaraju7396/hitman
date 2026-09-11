@@ -1,0 +1,424 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LensCraft Photography</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #111;
+            color: #fff;
+        }
+
+        /* Navbar */
+        nav {
+            background: #000;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #f5b942;
+        }
+
+        /* Hero */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #f5b942;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Common section */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.04);
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service {
+            background: #1d1d1d;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .service h3 {
+            color: #f5b942;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #ccc;
+        }
+
+        /* About */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #ccc;
+            font-size: 18px;
+        }
+
+        /* Contact */
+        .contact {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact button {
+            padding: 13px 30px;
+            background: #f5b942;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 25px;
+            color: #aaa;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .gallery,
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">LensCraft</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Capturing Your Story</h1>
+
+            <p>
+                Professional Photography & Videography
+            </p>
+
+            <a href="#gallery" class="btn">
+                View My Work
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery -->
+    <section id="gallery">
+
+        <h2 class="section-title">
+            My Portfolio
+        </h2>
+
+        <div class="gallery">
+
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+                 alt="Wedding Photography">
+
+            <img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=800&q=80"
+                 alt="Portrait Photography">
+
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"
+                 alt="Nature Photography">
+
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+                 alt="Wedding Couple">
+
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+                 alt="Landscape Photography">
+
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+                 alt="Portrait">
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services">
+
+        <h2 class="section-title">
+            Services
+        </h2>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>Wedding Photography</h3>
+
+                <p>
+                    Beautifully capturing every special moment
+                    of your wedding day.
+                </p>
+            </div>
+
+
+            <div class="service">
+                <h3>Corporate Videos</h3>
+
+                <p>
+                    Professional corporate photography,
+                    promotional videos and brand content.
+                </p>
+            </div>
+
+
+            <div class="service">
+                <h3>Instagram Reels</h3>
+
+                <p>
+                    Creative short-form videos designed for
+                    social media and digital marketing.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about">
+
+            <p>
+                I am a professional photographer and cinematographer
+                passionate about storytelling through images and film.
+                I specialize in weddings, portraits, corporate videos,
+                advertisements and social media content.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <div class="contact">
+
+            <form>
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    placeholder="Event / Project Type"
+                >
+
+                <textarea
+                    placeholder="Tell me about your project..."
+                ></textarea>
+
+                <button type="submit">
+                    Send Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LensCraft Photography.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
